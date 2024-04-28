@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Calorias</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Calorias</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Alimento</th>
+            <th>Calorias</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="m-nome">Alimento</label>
+          <input id="m-nome" type="text" required />
+  
+          <label for="m-calorias">Calorias</label>
+          <input id="m-calorias" type="number" required />
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+    <!-- Span para exibir a soma total de calorias -->
+    <span id="totalCalories">&nbsp;Total de Calorias: 0 kcal</span>
+  </div>
+  <script src="script.js"></script>
